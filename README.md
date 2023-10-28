@@ -38,6 +38,8 @@ PASS
 ok  	github.com/sinhashubham95/structs-vs-pointers/nostackwithoutreturn	       2.367s
 ```
 
+Within a function, both are equally treated in all aspects of performance, but as we all know using by reference without any extra returns is unnecessary. **So it's preferred to work within a function by value.**
+
 ### No Stack With Return
 
 This is the most common scenario where the object, either struct or its pointer is used within a single method along with returning the value.
@@ -63,6 +65,8 @@ BenchmarkS5fByPointer  	1000000000	         0.2560 ns/op	       0 B/op	       0 
 PASS
 ok  	github.com/sinhashubham95/structs-vs-pointers/nostackwithreturn	               5.625s
 ```
+
+When the object is returned from the function, structs with lesser fields can be allocated withing the stack frame, that's why it performs similar to returning a pointer of the same. But with structs having more fields, when returned by value, it escapes the stack frame, resulting in degraded performance. **So it's preferred to return a struct by pointer**. 
 
 ### Basic Stack
 
@@ -90,6 +94,8 @@ PASS
 ok  	github.com/sinhashubham95/structs-vs-pointers/stack	       5.856s
 ```
 
+Similar to the section [above](#no-stack-with-return), **whenever structs have to be returned, it's preferred to use pointers**.
+
 ### Arrays
 
 This is the scenario where the object, either struct or its pointer is part of an array and is passed down multiple functions.
@@ -116,6 +122,8 @@ PASS
 ok  	github.com/sinhashubham95/structs-vs-pointers/arrays           7.374s
 ```
 
+By default, the Go compiler passes the arrays by pointer, so if the underlying struct type is its pointer, it skips the optimisation the Go compiler does to contain it within the stack frame. **So it's always preferred to use the underlying type as the struct value, rather than a pointer.** 
+
 ### Maps
 
 This is the scenario where the object, either struct or its pointer is part of a map and is passed down multiple functions.
@@ -141,3 +149,5 @@ BenchmarkS5fByPointer  	 2706584	       394.4 ns/op	     160 B/op	       2 alloc
 PASS
 ok  	github.com/sinhashubham95/structs-vs-pointers/maps	     10.182s
 ```
+
+By default, the Go compiler passes the maps by pointer, so if the underlying struct type is its pointer, it skips the optimisation the Go compiler does to contain it within the stack frame. **So it's always preferred to use the underlying type as the struct value, rather than a pointer.**
