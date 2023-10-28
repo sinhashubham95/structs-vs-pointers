@@ -1,4 +1,4 @@
-package basic
+package nostackwithreturn
 
 // S5F is a 5 field struct.
 type S5F struct {
@@ -10,21 +10,23 @@ type S5F struct {
 }
 
 // S5fByValue is method to test passing structs
-func S5fByValue() {
+func S5fByValue() S5F {
 	x := S5F{A: "naruto", B: "rocks", C: "hinata", D: "rocks", E: "boruto"}
 	x.A = "not naruto"
 	x.B = "not rocks"
 	x.C = "not hinata"
 	x.D = "not rocks"
 	x.E = "not boruto"
+	return x
 }
 
 // S5fByPointer is method to test passing pointers
-func S5fByPointer() {
+func S5fByPointer() *S5F {
 	x := &S5F{A: "naruto", B: "rocks", C: "hinata", D: "rocks", E: "boruto"}
 	x.A = "not naruto"
 	x.B = "not rocks"
 	x.C = "not hinata"
 	x.D = "not rocks"
 	x.E = "not boruto"
+	return x
 }

@@ -1,4 +1,4 @@
-package basic
+package nostackwithoutreturn
 
 // S10F is a 10 field struct.
 type S10F struct {
