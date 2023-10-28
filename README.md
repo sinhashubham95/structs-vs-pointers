@@ -34,7 +34,7 @@ BenchmarkS5fByValue    	1000000000	         0.2750 ns/op	       0 B/op	       0 
 BenchmarkS5fByPointer
 BenchmarkS5fByPointer  	1000000000	         0.2625 ns/op	       0 B/op	       0 allocs/op
 PASS
-ok  	github.com/sinhashubham95/structs-vs-pointers/nostack	   2.257s
+ok  	github.com/sinhashubham95/structs-vs-pointers/nostack	       2.257s
 ```
 
 ### Basic Stack
@@ -50,17 +50,17 @@ cpu: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
 BenchmarkS10fByValue
 BenchmarkS10fByValue   	63777744	        18.56 ns/op	       0 B/op	       0 allocs/op
 BenchmarkS10fByPointer
-BenchmarkS10fByPointer 	1000000000	        0.2970 ns/op	   0 B/op	       0 allocs/op
+BenchmarkS10fByPointer 	1000000000	        0.2970 ns/op	       0 B/op	       0 allocs/op
 BenchmarkS2fByValue
-BenchmarkS2fByValue    	1000000000	        0.2998 ns/op	   0 B/op	       0 allocs/op
+BenchmarkS2fByValue    	1000000000	        0.2998 ns/op	       0 B/op	       0 allocs/op
 BenchmarkS2fByPointer
-BenchmarkS2fByPointer  	1000000000	        0.2845 ns/op	   0 B/op	       0 allocs/op
+BenchmarkS2fByPointer  	1000000000	        0.2845 ns/op	       0 B/op	       0 allocs/op
 BenchmarkS5fByValue
 BenchmarkS5fByValue    	89151668	        11.95 ns/op	       0 B/op	       0 allocs/op
 BenchmarkS5fByPointer
-BenchmarkS5fByPointer  	1000000000	        0.2558 ns/op	   0 B/op	       0 allocs/op
+BenchmarkS5fByPointer  	1000000000	        0.2558 ns/op	       0 B/op	       0 allocs/op
 PASS
-ok  	github.com/sinhashubham95/structs-vs-pointers/stack	   5.856s
+ok  	github.com/sinhashubham95/structs-vs-pointers/stack	       5.856s
 ```
 
 ### Arrays
@@ -78,15 +78,15 @@ BenchmarkS10fByValue   	54680168	        21.44 ns/op	       0 B/op	       0 allo
 BenchmarkS10fByPointer
 BenchmarkS10fByPointer 	40205076	        32.38 ns/op	       0 B/op	       0 allocs/op
 BenchmarkS2fByValue
-BenchmarkS2fByValue    	1000000000	        0.2780 ns/op	   0 B/op	       0 allocs/op
+BenchmarkS2fByValue    	1000000000	        0.2780 ns/op	       0 B/op	       0 allocs/op
 BenchmarkS2fByPointer
 BenchmarkS2fByPointer  	157222998	        6.792 ns/op	       0 B/op	       0 allocs/op
 BenchmarkS5fByValue
-BenchmarkS5fByValue    	1000000000	        0.3046 ns/op	   0 B/op	       0 allocs/op
+BenchmarkS5fByValue    	1000000000	        0.3046 ns/op	       0 B/op	       0 allocs/op
 BenchmarkS5fByPointer
 BenchmarkS5fByPointer  	64820839	        17.53 ns/op	       0 B/op	       0 allocs/op
 PASS
-ok  	github.com/sinhashubham95/structs-vs-pointers/arrays   7.374s
+ok  	github.com/sinhashubham95/structs-vs-pointers/arrays           7.374s
 ```
 
 ### Maps
@@ -104,13 +104,13 @@ BenchmarkS10fByValue   	 1296307	       948.6 ns/op	     320 B/op	       2 alloc
 BenchmarkS10fByPointer
 BenchmarkS10fByPointer 	 3258984	       365.7 ns/op	     320 B/op	       2 allocs/op
 BenchmarkS2fByValue
-BenchmarkS2fByValue    	 6066308	       207.0 ns/op	     0 B/op	           0 allocs/op
+BenchmarkS2fByValue    	 6066308	       207.0 ns/op	     0 B/op	       0 allocs/op
 BenchmarkS2fByPointer
 BenchmarkS2fByPointer  	 4198629	       294.0 ns/op	     64 B/op	       2 allocs/op
 BenchmarkS5fByValue
-BenchmarkS5fByValue    	 4554530	       288.8 ns/op	     0 B/op	           0 allocs/op
+BenchmarkS5fByValue    	 4554530	       288.8 ns/op	     0 B/op	       0 allocs/op
 BenchmarkS5fByPointer
 BenchmarkS5fByPointer  	 2706584	       394.4 ns/op	     160 B/op	       2 allocs/op
 PASS
-ok  	github.com/sinhashubham95/structs-vs-pointers/maps	 10.182s
+ok  	github.com/sinhashubham95/structs-vs-pointers/maps	     10.182s
 ```
