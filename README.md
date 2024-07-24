@@ -96,7 +96,7 @@ ok  	github.com/sinhashubham95/structs-vs-pointers/stack	       5.856s
 
 Similar to the section [above](#no-stack-with-return), **whenever structs have to be returned, it's preferred to use pointers**.
 
-### Arrays
+### Arrays(Slices)
 
 This is the scenario where the object, either struct or its pointer is part of an array and is passed down multiple functions.
 
@@ -122,7 +122,7 @@ PASS
 ok  	github.com/sinhashubham95/structs-vs-pointers/arrays           7.374s
 ```
 
-By default, the Go compiler passes the arrays by pointer, so if the underlying struct type is its pointer, it skips the optimisation the Go compiler does to contain it within the stack frame. **So it's always preferred to use the underlying type as the struct value, rather than a pointer.** 
+By default, the Go compiler passes the arrays(slices) as a slice header struct, so if the underlying struct type is its pointer, it skips the optimisation the Go compiler does to contain it within the stack frame. **So it's always preferred to use the underlying type as the struct value, rather than a pointer.** 
 
 ### Maps
 
